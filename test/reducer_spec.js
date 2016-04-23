@@ -2,7 +2,8 @@
 import {Map, fromJS} from 'immutable'
 import {expect} from 'chai'
 
-import {reducer} from '../src/reducer'
+// reducer can be imported without curly braces because it is the default export
+import reducer from '../src/reducer'
 
 describe('reducer', () => {
   it('handles SET_ENTRIES', () => {
