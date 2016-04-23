@@ -64,4 +64,27 @@ describe('reducer', () => {
       entries: ['Trainspotting']
     }))
   })
+
+  it('can be used with reduce', () => {
+    // This is where the reducer gets its name. A reducer should be able to take
+    // a state with a collection of actions and reduce() them into the current
+    // state.
+    const actions = [
+      { type: 'SET_ENTRIES', entries: ['Trainspotting', '28 Days Later'] },
+      { type: 'NEXT' },
+      { type: 'VOTE', entry: 'Trainspotting' },
+      { type: 'VOTE', entry: '28 Days Later' },
+      { type: 'VOTE', entry: 'Trainspotting' },
+      { type: 'NEXT' }
+    ]
+
+    // 1. reducer(Map(), actions[0])
+    // 2. reducer(returned value from above, actions[1])
+    // 3. and so on...
+    const nextState = actions.reduce(reducer, Map())
+
+    expect(nextState).to.equal(fromJS({
+      winner: 'Trainspotting'
+    }))
+  })
 })
