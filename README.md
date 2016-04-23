@@ -10,7 +10,7 @@ Tutorial](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html)
 
 ## Setting Up the App
 
-`npm init`
+`npm install`
 
 Pretty standard - will install the dependencies you need.
 
