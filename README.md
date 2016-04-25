@@ -22,6 +22,13 @@ The latter will automatically run the tests after any changes in the code.
 
 The testing framework consists of Mocha, Chai, and Chai-Immutable.
 
+## Starting the App
+
+`npm run start`
+
+Fires up `babel-node` CLI (not recommended for production use), creates the
+Redux Store, and starts the WebSockets server.
+
 ## State
 
 Examples of state structure:
