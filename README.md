@@ -21,3 +21,30 @@ Pretty standard - will install the dependencies you need.
 The latter will automatically run the tests after any changes in the code.
 
 The testing framework consists of Mocha, Chai, and Chai-Immutable.
+
+## State
+
+Examples of state structure:
+
+### Active Vote
+
+```
+Map({
+  vote: Map({
+    pair: List.of('Trainspotting', '28 Days Later'),
+    tally: Map({
+      'Trainspotting': 4,
+      '28 Days Later': 3
+    })
+  }),
+  entries: List.of('Sunshine', 'Millions', '127 Hours')
+})
+```
+
+### Winner
+
+```
+Map({
+  winner: 'Trainspotting'
+})
+```
